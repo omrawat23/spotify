@@ -11,6 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { useAnalytics } from "@/contexts/AnalyticsContext"
+import Image from "next/image"
 
 export function AnalyticsContent() {
   const { currentView, timeRange, setTimeRange, data, loading, error } = useAnalytics()
@@ -93,7 +94,9 @@ export function AnalyticsContent() {
                 </CardHeader>
                 <CardContent className="text-white">
                   <div className="flex items-center gap-4">
-                    <img
+                    <Image
+                    width={1000}
+                    height={1000}
                       src={currentView === 'top-artists' 
                         ? (item.images && item.images[0] ? item.images[0].url : '/placeholder.svg') 
                         : (item.album && item.album.images && item.album.images[0] ? item.album.images[0].url : '/placeholder.svg')}
@@ -172,7 +175,9 @@ export function AnalyticsContent() {
                 </CardHeader>
                 <CardContent className="text-white">
                   <div className="flex items-center gap-4">
-                    <img
+                    <Image
+                    width={1000}
+                    height={1000}
                       src={track.album && track.album.images && track.album.images[0] ? track.album.images[0].url : '/placeholder.svg'}
                       alt={track.album ? track.album.name : 'Album'}
                       className="w-16 h-16 rounded-lg"

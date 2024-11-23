@@ -84,10 +84,7 @@ import {
     try {
       requestBody = await request.json();
     } catch (error) {
-      return Response.json(
-        { error: "Invalid JSON in request body" },
-        { status: 400 }
-      );
+      return Response.json(error);
     }
   
     while (retries <= MAX_RETRIES) {

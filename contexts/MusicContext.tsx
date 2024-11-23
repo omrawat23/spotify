@@ -110,7 +110,6 @@ export const MusicProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     };
 
     fetchPlaylistTracks();
-    console.log(selectedPlaylist)
   }, [selectedPlaylist]);
 
   // Format duration from milliseconds to mm:ss

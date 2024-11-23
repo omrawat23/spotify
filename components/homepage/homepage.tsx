@@ -11,7 +11,7 @@ import { useSpotifyUserData } from "@/lib/useSpotifyUserData";
 
 export function LeftSidebar() {
   const router = useRouter();
-  const { playlists } = useMusic();
+  // const { playlists } = useMusic();
   const { userData, savedTracks, error } = useSpotifyUserData();
 
   return (
@@ -43,7 +43,7 @@ export function LeftSidebar() {
             variant="secondary"
             className="bg-white/[0.07] hover:bg-white/[0.1] text-white border-0 rounded-full"
           >
-            {playlists.length || 0} Playlists
+            {/* {playlists.length || 0} Playlists */}
           </Badge>
         </div>
 

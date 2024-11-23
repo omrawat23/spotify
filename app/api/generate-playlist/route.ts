@@ -80,10 +80,7 @@ export async function POST(request: Request) {
   try {
     requestBody = await request.json();
   } catch (error) {
-    return Response.json(
-      { error: "Invalid JSON in request body" },
-      { status: 400 }
-    );
+    console.error("Invalid ", error);
   }
 
   while (retries <= MAX_RETRIES) {

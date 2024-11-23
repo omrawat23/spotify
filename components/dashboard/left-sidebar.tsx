@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { useMusic } from "@/contexts/MusicContext";
 import { useState, useEffect } from "react";
 import { useSpotifyUserData } from "@/lib/useSpotifyUserData";
+import Image from "next/image";
 
 export function LeftSidebar() {
   const { playlists, selectedPlaylist, setSelectedPlaylist, isLoading } = useMusic();
@@ -154,7 +155,9 @@ export function LeftSidebar() {
                 ${selectedPlaylist?.id === playlist.id ? "bg-white/10" : "hover:bg-white/[0.07]"}
               `}
             >
-              <img
+              <Image
+              width={1000}
+              height={1000}
                 src={playlist?.images?.[0]?.url || "/placeholder.svg"}
                 alt={playlist?.name || "Playlist"}
                 className="w-12 h-12 rounded-xl object-cover"

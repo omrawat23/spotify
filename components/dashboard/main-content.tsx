@@ -5,6 +5,7 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import { ChevronLeft, ChevronRight, Heart, MoreHorizontal, Play } from 'lucide-react'
 import { Badge } from "@/components/ui/badge"
 import { useMusic } from "@/contexts/MusicContext"
+import Image from "next/image"
 
 export function MainContent() {
   const { selectedPlaylist, songs, setCurrentSong, currentSong } = useMusic();
@@ -24,7 +25,9 @@ export function MainContent() {
         <div className="absolute inset-0 bg-gradient-to-b from-lime-400/80 to-lime-500/80 backdrop-blur-sm" />
         <div className="relative p-8 flex items-end gap-6">
         {selectedPlaylist?.images?.[0]?.url ? (
-          <img
+          <Image
+          width={1000}
+          height={1000}
             src={selectedPlaylist.images[0].url}
             alt="Playlist Cover"
             className="w-52 h-52 object-cover shadow-xl rounded-2xl"
@@ -71,7 +74,9 @@ export function MainContent() {
                 onClick={() => setCurrentSong(song)}
               >
                 <div className="w-6 text-white/60">{index + 1}</div>
-                <img 
+                <Image
+                width={1000}
+                height={1000} 
                   src={song.album.images[0].url} 
                   alt={song.name} 
                   className="w-12 h-12 rounded-xl" 
