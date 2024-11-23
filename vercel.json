@@ -2,6 +2,12 @@
   "functions": {
     "app/api/generate-playlist/route.ts": {
       "maxDuration": 60
+    },
+    "app/api/generate-prego/route.ts": {
+      "maxDuration": 60
+    },
+    "app/api/moodify/route.ts": {
+      "maxDuration": 60
     }
   }
 }
