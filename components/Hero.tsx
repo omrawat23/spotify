@@ -57,7 +57,7 @@ export default function HeroSection() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           {isAuthenticated ? (
-            <Link href="/dashboard">
+            <Link href="/dashboard/ai-playlist">
               <Button 
                 size="lg" 
                 className="w-full sm:w-auto animate-pulse bg-green-500 hover:bg-green-600 text-black font-bold"

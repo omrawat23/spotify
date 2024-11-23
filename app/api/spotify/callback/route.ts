@@ -52,7 +52,7 @@ export async function GET(request: Request) {
       });
     }
 
-    return NextResponse.redirect(`${process.env.NEXT_PUBLIC_BASE_URL}/dashboard`);
+    return NextResponse.redirect(`${process.env.NEXT_PUBLIC_BASE_URL}/dashboard/ai-playlist`);
   } catch (error) {
     console.error('Token exchange error:', error);
     return NextResponse.redirect(

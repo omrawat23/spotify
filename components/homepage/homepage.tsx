@@ -88,11 +88,11 @@ export function LeftSidebar() {
       </ScrollArea>
 
       {/* Create New Playlist Button */}
-      <div className="p-4">
+      {/* <div className="p-4">
         <Button className="w-full bg-primary hover:bg-primary/90" onClick={() => {}}>
           <Plus className="w-4 h-4 mr-2" /> Create New Playlist
         </Button>
-      </div>
+      </div> */}
     </div>
   );
 }
