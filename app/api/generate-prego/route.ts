@@ -152,7 +152,7 @@ export async function POST(request: Request) {
       } catch (parseError) {
         console.error("JSON parsing failed:", parseError);
         console.error("Problematic JSON string:", cleanedResponse);
-        throw new Error(`Failed to parse AI-generated playlist: ${parseError.message}`);
+        throw new Error(`Failed to parse AI-generated playlist: `);
       }
 
       if (playlist.length === 0) {
