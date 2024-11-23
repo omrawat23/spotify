@@ -22,7 +22,12 @@ import {
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
 
-export function Profile({ userData, onLogout }) {
+interface ProfileProps {
+    userData: any;   
+    onLogout: () => void; 
+  }
+  
+export const Profile: React.FC<ProfileProps> = ({ userData, onLogout }) => {
     const router = useRouter();
 
     const handleLogout = async () => {
