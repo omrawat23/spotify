@@ -7,6 +7,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { useAnalytics } from "@/contexts/AnalyticsContext"
 import { useSpotifyUserData } from "@/lib/useSpotifyUserData";
 
+type AnalyticsView = any;
+
 export function AnalyticsSidebar() {
   const { userData, savedTracks, error } = useSpotifyUserData();
   const { currentView, setCurrentView } = useAnalytics()
