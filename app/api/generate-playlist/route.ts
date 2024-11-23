@@ -13,8 +13,8 @@ interface Song {
   spotifyId?: string;
 }
 
-const MAX_RETRIES = 2;
-const TIMEOUT = 50000; // 50 seconds
+const MAX_RETRIES = 4;
+const TIMEOUT = 100000; // 50 seconds
 
 async function getSpotifyAccessToken(): Promise<string | null> {
   const basic = Buffer.from(

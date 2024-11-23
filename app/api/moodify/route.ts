@@ -21,8 +21,8 @@ import {
     id: string;
   }
   
-  const MAX_RETRIES = 2;
-  const TIMEOUT = 50000;
+  const MAX_RETRIES = 4;
+  const TIMEOUT = 100000;
   
   async function getSpotifyAccessToken(): Promise<string | null> {
     const basic = Buffer.from(
