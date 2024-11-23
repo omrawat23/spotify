@@ -170,7 +170,7 @@ export async function POST(request: Request) {
               }
           } catch (parseError) {
               console.error("JSON parsing failed:", parseError, "\nResponse:", cleanedResponse);
-              throw new Error(`Failed to parse AI response: ${parseError.message}`);
+              throw new Error(`Failed to parse AI response: `);
           }
 
           const validPlaylist = validateAndCleanPlaylist(playlist);
