@@ -8,6 +8,14 @@ import { Badge } from "@/components/ui/badge";
 import { useRouter } from "next/navigation";
 import { useMusic } from "@/contexts/MusicContext";
 import { useSpotifyUserData } from "@/lib/useSpotifyUserData";
+import { ReactNode } from "react";
+
+interface PlaylistButtonProps {
+  icon: ReactNode;   
+  label: string;   
+  onClick: () => void; 
+}
+
 
 export function LeftSidebar() {
   const router = useRouter();
@@ -89,7 +97,7 @@ export function LeftSidebar() {
   );
 }
 
-function PlaylistButton({ icon, label, onClick }) {
+const PlaylistButton: React.FC<PlaylistButtonProps> = ({ icon, label, onClick }) => {
   return (
     <Button
       variant="ghost"
@@ -100,5 +108,6 @@ function PlaylistButton({ icon, label, onClick }) {
       <span className="ml-3">{label}</span>
     </Button>
   );
-}
+};
 
+export default PlaylistButton;
