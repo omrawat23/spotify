@@ -24,30 +24,6 @@ import {
   const MAX_RETRIES = 4;
   const TIMEOUT = 100000;
   
-  async function getSpotifyAccessToken(): Promise<string | null> {
-    const basic = Buffer.from(
-      `${process.env.SPOTIFY_CLIENT_ID}:${process.env.SPOTIFY_CLIENT_SECRET}`
-    ).toString("base64");
-    const response = await fetch("https://accounts.spotify.com/api/token", {
-      method: "POST",
-      headers: {
-        Authorization: `Basic ${basic}`,
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: new URLSearchParams({
-        grant_type: "client_credentials",
-      }),
-    });
-  
-    if (!response.ok) {
-      console.error("Failed to get Spotify access token");
-      return null;
-    }
-  
-    const data = await response.json();
-    return data.access_token;
-  }
-  
   async function getRecentTracks(accessToken: string): Promise<SpotifyTrack[]> {
     try {
       const response = await fetch("https://api.spotify.com/v1/me/player/recently-played?limit=5", {
