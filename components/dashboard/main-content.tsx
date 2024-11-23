@@ -87,7 +87,7 @@ export function MainContent() {
                     {song.artists[0]?.name} plays
                   </div>
                 </div>
-                <div className="text-sm text-white/60">{song.duration}</div>
+                <div className="text-sm text-white/60">{song.duration_ms}</div>
                 <Button
                   variant="ghost"
                   size="icon"

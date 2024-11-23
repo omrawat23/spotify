@@ -133,7 +133,7 @@ export function LeftSidebar() {
                 id: "liked",
                 name: "Liked Songs",
                 type: "playlist",
-                cover: "/placeholder.svg",
+                images: [],
               })
             }
           >
